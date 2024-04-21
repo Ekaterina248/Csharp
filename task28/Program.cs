@@ -216,7 +216,7 @@ Console.WriteLine("Введите целое число или нажмите q 
 string string_number=Console.ReadLine();
 int number=Convert.ToInt32(string_number);//!ПРОБЛЕМА не может q преобразовать в число
 //Console.Write(SumCifrInCount(number));
-//while (SumCifrInCount(number)%2==1 || string_number!="q")
+//while (SumCifrInCount(number)%2==1 || string_number[0]!="q")
 while (SumCifrInCount(number)%2==1)
 {     
      string_number=Console.ReadLine();
