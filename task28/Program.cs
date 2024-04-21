@@ -175,7 +175,7 @@ Console.Write(GetNumber(user_arr));
     }
     return arr;
 } */
-int SumCifrInCount (int num)// метод суммирует цифры в числе
+/* int SumCifrInCount (int num)// МОЙ метод суммирует цифры в числе
 {
     double sdouble = Math.Floor(Math.Log10(num) + 1);//нашли кол-во цифр в числе
     int s=Convert.ToInt32(sdouble);//преобразовали кол-во цифр в числе в тип int
@@ -187,6 +187,17 @@ int SumCifrInCount (int num)// метод суммирует цифры в чи�
     num = num/10;
     sum = sum+arr[i];
     }
+    return sum;
+} */
+int SumCifrInCount (int num)// метод ИЗ ЛЕКЦИИ суммирует цифры в числе
+{
+    int sum=0;
+    while (num>0)
+    {
+      sum = sum+num%10;
+      num=num/10;
+    }
+    
     return sum;
 }
 
@@ -204,10 +215,10 @@ int SumCifrInCount (int num)// метод суммирует цифры в чи�
 Console.WriteLine("Введите целое число или нажмите q для выхода : ");
 string string_number=Console.ReadLine();
 int number=Convert.ToInt32(string_number);//!ПРОБЛЕМА не может q преобразовать в число
-
-while (SumCifrInCount(number)%2==1 || string_number!="q")
-{
-             
+//Console.Write(SumCifrInCount(number));
+//while (SumCifrInCount(number)%2==1 || string_number!="q")
+while (SumCifrInCount(number)%2==1)
+{     
      string_number=Console.ReadLine();
      number=Convert.ToInt32(string_number);
 }
