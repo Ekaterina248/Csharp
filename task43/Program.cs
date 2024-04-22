@@ -71,4 +71,59 @@ for (int i=0; i<frutArr.Length; i=i+1) //печатаем массив из ст
 
 Console.WriteLine();
 
+string text = "хотим увидеть прикольную приколюху";
+string[] textArr = text.Split(" "); // создание массива c разделением, указанным в скобках от строки text
+PrintArray(textArr);
 
+void PrintArray(string[] arr)
+{
+    Console.ForegroundColor = ConsoleColor.Green;//меняет цвет текста,который будет выводится после команды
+    System.Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Thread.Sleep(10);                           //пауза
+        System.Console.Write(arr[i]);
+        if (i< arr.Length-1)
+        System.Console.Write(", ");
+    }
+    Console.ForegroundColor = ConsoleColor.Green;
+    System.Console.Write("]");
+    Console.ResetColor();
+}
+
+System.Console.WriteLine();
+
+string str="Старушка так и сделала: намела, наскребла горсти две муки,"
+            +" замесила тесто на сметане, скатала колобок, изжарила его в масле и "
+            +"положила на окно простынуть."
+            +"Надоело колобку лежать — он и покатился с окна на лавку," 
+            +"с лавки на пол — да к двери, прыг через порог, в сени, из"
+            +"сеней на крыльцо, с крыльца на двор, а там и за ворота, дальше и дальше.";
+System.Console.WriteLine(str);
+
+System.Console.WriteLine();
+
+string[] separate = { ", ", ". ", " — ", ": "," ", ".","," };
+string[] stArr1 = str.Split(separate, StringSplitOptions.RemoveEmptyEntries);//принять группу разделителей
+PrintArray(stArr1);
+System.Console.WriteLine();
+for (int i = 0; i < stArr1.Length; i++)
+{
+    System.Console.Write($"{stArr1[i]} ");
+}
+
+System.Console.WriteLine();
+
+//----------------------------------------
+/*Интовый массив в стринговый и наоборот*/
+
+string strnum="1,2,3,4,5";
+int[] num=new int[strnum.Length];
+string[] charArr3=strnum.Split(",");
+for (int i = 0; i <strnum.Length; i++)
+{
+    num[i]= Convert.ToInt32(charArr3[i]);
+    System.Console.WriteLine(num[i]);
+}
+System.Console.WriteLine();
