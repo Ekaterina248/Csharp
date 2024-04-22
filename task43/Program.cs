@@ -70,3 +70,5 @@ for (int i=0; i<frutArr.Length; i=i+1) //печатаем массив из ст
     }
 
 Console.WriteLine();
+
+
