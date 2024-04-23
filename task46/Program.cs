@@ -4,31 +4,22 @@
 введённых букв гласных.
 
 */
-Console.WriteLine("введите строку состоящую из латинских букв в нижнем регистре: ");
+//Console.WriteLine("введите строку состоящую из латинских букв в нижнем регистре: ");
 //string st = (Console.ReadLine());
-string st="hellow";
+    string st="аоия777ккeky";
+    string glasny="eyuioaуеыаоэяию";
+    int sumglas=0;
 
-char[] charArr=new char [st.Length];
-int sumglas=0;
-for (int i = 0; i < st.Length; i++)
-{
-    charArr[i]=st[i];
-    /* if (charArr[i]==e);//как задать условие???
+    for (int i = 0; i < st.Length; i++)
     {
+    for (int j=0; j<glasny.Length; j++)
+    {
+      if (st[i]==glasny[j])
+      {
         sumglas=sumglas+1;
-    } */
-    System.Console.Write($"'{charArr[i]}', "); 
-}
-System.Console.WriteLine();
-System.Console.WriteLine(charArr[1].CompareTo('t'));
-System.Console.WriteLine(charArr[1].CompareTo('h'));
-System.Console.WriteLine(charArr[1].CompareTo('l'));
-System.Console.WriteLine(charArr[1].CompareTo('r'));
-System.Console.WriteLine();
-System.Console.WriteLine($"сумма гласных = {sumglas}"); 
-/*for (int i = 0; i < st.Length; i++)
-{
-    if (st.Contains('e');
-}
-
-System.Console.WriteLine(st.Contains('e'));*/
+      }
+    }
+    }
+    
+    Console.WriteLine($"кол-во гласных букв в строке'{st}' равно {sumglas}");
+    
